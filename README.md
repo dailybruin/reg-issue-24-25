@@ -49,4 +49,4 @@ To set up, test, and build the app:
 
 ## Documentation
 
-See documentation [LINK IT HERE SAKSHI] for GitHub rules, PR conventions, and good coding practices.
+See documentation for GitHub rules, PR conventions, and good coding practices.

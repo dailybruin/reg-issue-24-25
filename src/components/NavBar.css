@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+.vine {
+    background-color: transparent;
+    position: absolute;
+    left: -8.5em;
+    top: -2em;
+    object-fit: cover;
+    z-index: 3005;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3F2B1B;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure the navbar spans the full width */
+    overflow: visible;
+}
+
 /* Actual full bar component */
 .navbar {
     background-color: #654321;
@@ -7,18 +27,9 @@
     width: 100%;
     z-index: 1;
     position: sticky;
-    display: flex;             /* TODO: test */
-    top: 0px;
-}
-
-.nav-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    display: flex;              /* TODO: test */
+    top: 28px;                  /* so that Daily Bruin logo remains at the top, uncovered by sticky */
+    overflow: visible;
 }
 
 /* Style for link */

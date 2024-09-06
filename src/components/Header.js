@@ -7,10 +7,10 @@ const DBHeader = styled("div")`
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: black;
+  background: #F6E4E1;
   width: 100%;
   padding: 0.2em 0;
-  color: white; 
+  color: #4C6953; 
   font-family: 'ITC Century';
   font-style: normal;
   font-weight: 400;
@@ -21,7 +21,7 @@ const DBHeader = styled("div")`
 
   /* Override default link styles */
   a {
-    color: white; /* Set the color for the link text */
+    color: #4C6953; /* Set the color for the link text */
     text-decoration: none; /* Remove underline if desired */
   }
 `;

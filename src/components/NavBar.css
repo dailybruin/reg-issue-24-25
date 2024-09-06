@@ -3,9 +3,11 @@
 .vine {
     background-color: transparent;
     position: absolute;
-    left: -8.5em;
-    top: -2em;
+    left: -150%;
+    top: -80%;
     object-fit: cover;
+    width: 100%;
+    
 }
 
 .nav {
@@ -64,11 +66,11 @@
 }
 
 .nav-component:hover {
-    background-color: #9F8B70; /* Darker brown on hover */
+    background-color: #BCAFDB; /* Darker brown on hover */
 }
 
 .nav-component:active {
-    background-color: #123456; /* Even darker brown when active */
+    background-color: #4C6953; /* Even darker brown when active */
 }
 
 .nav-button {

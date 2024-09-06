@@ -6,7 +6,6 @@
     left: -8.5em;
     top: -2em;
     object-fit: cover;
-    z-index: 3005;
 }
 
 .nav {
@@ -25,11 +24,10 @@
     background-color: #654321;
     padding: 0;
     width: 100%;
-    z-index: 1;
-    position: sticky;
-    display: flex;              /* TODO: test */
+    z-index: 2002;              /* set so that vines cover Header, and not vice versa */
     top: 28px;                  /* so that Daily Bruin logo remains at the top, uncovered by sticky */
     overflow: visible;
+    position: sticky;
 }
 
 /* Style for link */
@@ -45,6 +43,8 @@
     margin: 0em;          /* TODO: test */
     transition: 0.3s ease;  /* TODO: test */
     display: inline-flex;
+    overflow: visible;
+    position: relative;
 }
 
 .nav-component a {

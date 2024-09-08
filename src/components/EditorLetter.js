@@ -10,6 +10,7 @@ const OuterContainer = styled.div`
 `;
 
 
+
 const Title = styled.div`
     color: #F6E4E1;
     font-family: "Cinzel", serif;

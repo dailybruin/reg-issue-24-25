@@ -15,7 +15,7 @@ function App() {
   return data && (
     <div className="App">
       <Header/>
-      Hello Daily Trojan!
+      Hello Daily Bruin!
       <Footer/>
     </div>
   );

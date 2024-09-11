@@ -3,27 +3,46 @@ import styled from "styled-components";
 import { mediaQueries } from "../shared/config";
 
 const OuterContainer = styled.div`
-    background: #704E34;
+    background: #4C6953;
     width: 100%;
     height: fit-content;
     padding-bottom: 12%;
 `;
 
 
+
 const Title = styled.div`
-    color: #FFF1E2;
-    font-family: "Inter", sans-serif;
-    font-size: 70px;
+    color: #F6E4E1;
+    font-family: "Cinzel", serif;
+    font-size: 115px;
     font-style: normal;
-    font-weight: 600; /* Semi-bold */
+    font-weight: 700; /* Semi-bold */
     text-transform: uppercase;
-    padding-bottom: 3%;
-    padding-top: 5%;
+    padding-bottom: 0%;
+    padding-top: 3%;
     ${mediaQueries.mobile} {
       font-size: 30px;
       padding-top: 10%;
     }
 `;
+
+
+
+const Title2 = styled.div`
+    color: #F6E4E1;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700; /* Semi-bold */
+    text-transform: uppercase;
+    padding-bottom: 3%;
+    padding-top: 0%;
+    ${mediaQueries.mobile} {
+      font-size: 30px;
+      padding-top: 10%;
+    }
+`;
+
 
 const Container = styled.div`
   position: relative;
@@ -31,8 +50,7 @@ const Container = styled.div`
   width: 60%;
   height: fit-content;
   block-size: fit-content;
-  border: 1px solid black;
-  background: #3F2B1B;
+  background: #4C6953;
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: light;
@@ -46,7 +64,7 @@ const Container = styled.div`
 `;
 
 const Text = styled.div`
-  padding: 1em 3em;
+  padding: 0em 0em;
   ${mediaQueries.mobile} {
     padding: 1em 1em;
   }
@@ -54,16 +72,16 @@ const Text = styled.div`
 
 const Content = styled.div`
   margin: 5%;
-  margin-top: 7%;
+  margin-top: 0%;
   margin-bottom: 7%;
-  font-family: "Oswald", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: light;
+  font-weight: 400;
   font-style: normal;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 21.1px;
   text-align: justify;
-  color: white;
+  color: #F6E4E1;
   ${mediaQueries.mobile} {
     font-size: 14px;
     
@@ -73,7 +91,8 @@ const Content = styled.div`
 export default function EditorLetter(props) {
   return (
     <OuterContainer>
-      <Title>Letter from the Editors</Title>
+      <Title>Letter</Title>
+      <Title2>From the Editors</Title2>
       <Container>
         <Text>
           <Content>

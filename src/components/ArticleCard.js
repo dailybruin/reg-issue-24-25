@@ -24,7 +24,11 @@ const Container = styled.div`
     }
 
     ${mediaQueries.mobile} {
-        justify-content: flex-start; // Align items at the start on mobile
+        width: 100%;
+        height: 35vh;
+        border: 4px solid #4C6953;
+        border-radius: 2vw;
+
         padding-top: 1vh; // Adjust padding to move content up
     }
 `;
@@ -79,7 +83,7 @@ const ByLine = styled.div`
         width: 90%;
         height: fit-content;
         margin-left: 5%;
-        margin-top: -5%;
+        margin-top: -10%;
     }
 `
 
@@ -96,10 +100,12 @@ const Image = styled.img`
 
     ${mediaQueries.mobile} {
         width: 90%;
-        height: 30vh;
-        object-fit: cover;
-        left: 5%;
-        top: 5%;
+        height: 19vh;
+        border-radius: 2vh;
+
+        
+        left: 2.5%;
+        top: 0.5vh;
     }
 `
 

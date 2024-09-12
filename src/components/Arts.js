@@ -4,7 +4,8 @@ import ArticleCard from './ArticleCard.js';
 const ArtsGrid = styled("div")`
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(6, 30vh);
+    grid-template-rows: repeat(6, 40vh);
+    column-gap: 5%;
 
     background: #9AA8B1;
 

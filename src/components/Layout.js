@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useRef} from 'react';
-//import Header from './Header';
-//import Footer from './Footer';
+import Header from './Header';
+import Footer from './Footer';
 //import LandingAnim from './LandingAnim';
 import NavBar from './NavBar';
-//import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
 import styled from "styled-components";
 
 /* TODO: Remove (temporary for spacing until sections are set up)
@@ -59,14 +59,28 @@ const Layout = () => {
     return () => window.removeEventListener('resize', updateOffsets);
   }, []);
 
-  return (
-    <div className="App" style={{overflow: 'visible'}}>
-      <div id="title"></div>
-      <Title></Title>
-      <NavBar offsets={offsetTops} />
-      <Title></Title>
-    </div>
-  );
+  const isMobile = useMediaQuery({ query: '(max-width: 456px)' });
+  
+  if (isMobile) {
+    return (
+      <div className="App" style={{overflow: 'visible'}}>
+        <div id="title"></div>
+        <NavBar offsets={offsetTops} />
+        <Title></Title>
+      </div>
+    );
+  }
+  else {
+    return (
+      <div className="App" style={{overflow: 'visible'}}>
+        <div id="title"></div>
+        <Header />
+        <NavBar offsets={offsetTops} />
+        <Title />
+        <Footer />
+      </div>
+    );
+  }
 };
 
   /*

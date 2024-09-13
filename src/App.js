@@ -16,7 +16,6 @@ function App() {
 
   return data && (
     <div className="App">
-      <Header/>
       <Layout />
       <Footer/>
     </div>

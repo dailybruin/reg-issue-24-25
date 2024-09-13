@@ -82,13 +82,14 @@
     max-height: 80px;
 }
 
-
-
 @media screen and (max-width: 426px) {
     .nav-button {
         padding: 0; /* Adjust padding for desired height */
     }
 
+    .navbar {
+        top: 0px;
+    }
 }
 
 .hamburger {
@@ -102,14 +103,14 @@
 
 .close {
     display: none; /* Hidden by default */
-     background: none;
-     border: none;
-     font-size: 24px;
+    background: none;
+    border: none;
+    font-size: 24px;
     color: #ffffff;
-     cursor: pointer;
-     position: absolute;
-     top: 10px;
-     right: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 #navbar {
@@ -188,7 +189,7 @@ html {
         justify-items: center;
         align-items: center;
         padding: 2px;
-        background-color: #3F2B1B;
+        background-color: #4C6953;
         background-color: #f0f0f0;
         width: 100%;
         z-index: 10;

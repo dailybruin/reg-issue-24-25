@@ -5,21 +5,7 @@ import hamburgerButton from '../images/buttons/hamburger.svg';
 import cancelButton from '../images/buttons/cancel.svg';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
-
-const DBHeader = styled("div")`
-  z-index: 10;
-  background: black;
-  width: 100%;
-  color: white;
-  font-family: 'ITC Century';
-  font-style: normal;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
-  line-height: 21.6px;
-  height: 29.2px;
-`;
+import DBHeader from './Header';
 
 export default function NavBar({ offsets }) {
     const navItems = ['Letter', 'Interactive', 'News', 'Sports', 'Arts', 'Opinion', 'Quad', 'Multimedia', 'Prime', 'About'];

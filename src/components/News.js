@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import ArticleCard from './ArticleCard.js';
+import { mediaQueries } from '../shared/config';
+
 
 const Container = styled.div`
     background: #4C6953;
@@ -12,7 +14,10 @@ const Grid = styled.div`
     row-gap: 3%;
     column-gap: -2em;
     margin-bottom: 4em;
-    margin-left: 8%;
+    margin-left: 6%;
+    ${mediaQueries.mobile} {
+        margin-left: 3%;
+    }
 `;
 
 const Title = styled.div`

@@ -35,7 +35,7 @@ function App() {
       <div><Quad articles={data.quad}/></div>
       <div><Multimedia articles={data.multimedia}/></div>
       <div><Prime articles={data.prime}/></div>
-      {/*<EditorLetter editor_letter={data.editor_letter}/>*/}
+      <EditorLetter editor_letter={data.editor_letter}/>
       <Footer/>
     </div>
   );

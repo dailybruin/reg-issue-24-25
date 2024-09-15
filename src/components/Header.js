@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 const DBHeader = styled("div")`
-  z-index: 2001;
+  z-index: 10;
   position: -webkit-sticky;
   position: sticky;
   top: 0;

@@ -11,6 +11,9 @@ import Quad from './components/Quad';
 import Multimedia from './components/Multimedia';
 import Prime from './components/Prime';
 
+import Issue from './components/Issue';
+import NavBar from './components/NavBar';
+
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -28,6 +31,8 @@ function App() {
   return data && (
     <div className="App">
       <Header/>
+      {/*<NavBar/>*/}
+      <Issue/>
       <div><News articles={data.news}/></div>
       <div><Sports articles={data.sports}/></div>
       <div><Arts articles={data.arts}/></div>

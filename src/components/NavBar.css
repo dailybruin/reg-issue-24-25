@@ -1,24 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+.vine {
+    background-color: transparent;
+    position: absolute;
+    left: -150%;
+    top: -80%;
+    object-fit: cover;
+    width: 100%;
+    z-index: 1000000;
+    
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3F2B1B;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure the navbar spans the full width */
+    overflow: visible;
+}
+
 /* Actual full bar component */
 .navbar {
     background-color: #654321;
     padding: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2002;              /* set so that vines cover Header, and not vice versa */
+    top: 28px;                  /* so that Daily Bruin logo remains at the top, uncovered by sticky */
+    overflow: visible;
     position: sticky;
-    display: flex;             /* TODO: test */
-    top: 0px;
-}
-
-.nav-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    width: 100%;
 }
 
 /* Style for link */
@@ -34,6 +46,8 @@
     margin: 0em;          /* TODO: test */
     transition: 0.3s ease;  /* TODO: test */
     display: inline-flex;
+    overflow: visible;
+    position: relative;
 }
 
 .nav-component a {
@@ -53,11 +67,11 @@
 }
 
 .nav-component:hover {
-    background-color: #9F8B70; /* Darker brown on hover */
+    background-color: #BCAFDB; /* Darker brown on hover */
 }
 
 .nav-component:active {
-    background-color: #123456; /* Even darker brown when active */
+    background-color: #4C6953; /* Even darker brown when active */
 }
 
 .nav-button {
@@ -66,4 +80,188 @@
     border: 5px solid #F6E4E1;
     min-height: 30px;
     max-height: 80px;
+}
+
+@media screen and (max-width: 426px) {
+    .nav-button {
+        padding: 0; /* Adjust padding for desired height */
+    }
+
+    .navbar {
+        top: 0px;
+    }
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.close {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#navbar {
+     display: block;
+     background-color: #333;
+  }
+
+.sticky {
+    z-index: 10;
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+    .nav {
+        display: none; /* Hide desktop nav */
+        padding: 1em;
+        box-sizing: border-box;
+        animation: slideInFromLeft 0.5s ease;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu */
+        position: absolute;
+        /* position: sticky; */
+        z-index: 10;
+        top: 0;
+        right: 0;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        
+    }
+
+    .mobile-menu img {
+        width: 76%; 
+        height: 76%;
+        display: block;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+
+    .hamburger img { 
+        width: 76%; 
+        height: 76%;
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .nav-mobile-open {
+        display: grid;
+        /* position: fixed; */
+        grid-template-columns: repeat(5, 1fr);
+        gap: 5px;
+        justify-items: center;
+        align-items: center;
+        padding: 2px;
+        background-color: #4C6953;
+        background-color: #f0f0f0;
+        width: 100%;
+        z-index: 10;
+        /* position: sticky; */
+        top: 0;
+    }
+
+     .mobile-menu-overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100vh;
+         background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+         z-index: 10;
+     }
+
+    .close {
+        display: block; /* Show close button */
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        padding: 0;
+        z-index: 10;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        right: auto;
+
+    }
+
+    .nav-component {
+         /* Reset flex property for grid layout */
+        width: 100%;
+        background-color: #4C6953;
+        border-radius: 5px;
+        padding-top: 10px;
+        ;
+    }
+
+    .nav-button {
+        width: 100%;
+        padding: 1em;
+        border: 2px solid #ffffff;
+    }
+    @media (max-width: 450px) {
+        .nav-button {
+            width: 100%;
+            border: 0px solid #ffffff;
+            padding: 0;
+            /* padding: 1em; */
+            /* border: 2px solid #ffffff; */
+        }
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+    @media (max-width: 728px) {
+        .nav-link {
+            font-size: 5px;
+            /* padding: 1em; */
+            /* border: 2px solid #ffffff; */
+        }
+    }
+
+
+    
 }

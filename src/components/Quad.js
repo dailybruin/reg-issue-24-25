@@ -29,12 +29,6 @@ const Title = styled.div`
     margin-bottom: 0.4em;
 `;
 
-const Center = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    margin-top: 6em;
-    margin-left: 30%;
-`;
 
 const Quad = ({articles}) => {
 

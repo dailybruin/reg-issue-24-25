@@ -3,6 +3,8 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Issue from './components/Issue';
+import NavBar from './components/NavBar';
+
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -16,7 +18,7 @@ function App() {
   return data && (
     <div className="App">
       <Header/>
-      Hello Daily Trojan!
+      <NavBar/>
       <Issue/>
       <Footer/>
     </div>

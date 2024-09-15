@@ -6,6 +6,10 @@ const Container = styled.div`
     height: 30em;
     left: -2px;
     background: #D3D7C6;
+    display: flex;
+    justify-content: center;
+    align-items: flext-start;
+    padding-top: 3em;
 `
 
 const Title = styled.div`
@@ -24,7 +28,7 @@ const Issue = (props) => {
     return(
         <>
         <Container>
-            <Title>WHAT IS IN THIS ISSUE?</Title>
+            <Title>What is in this issue?</Title>
         </Container>
         </>
     )

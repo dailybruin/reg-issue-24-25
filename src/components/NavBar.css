@@ -3,7 +3,7 @@
 .vine {
     background-color: transparent;
     position: absolute;
-    left: -150%;
+    left: -10%;
     top: -80%;
     object-fit: cover;
     width: 100%;

@@ -25,9 +25,10 @@ const Title = styled.div`
     justify-content: center; /* Center items horizontally */
 `;
 
-const Layout = () => {
+const Layout = ( { children } ) => {
 
-  const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime', 'thirty', 'about'];
+  //const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime', 'thirty', 'about'];
+  const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime'];
 
   const [offsetTops, setOffsetTops] = useState({});
   const layoutRef = useRef(null);
@@ -37,17 +38,20 @@ const Layout = () => {
         if (layoutRef.current) return;
 
         const sections = navIds.map(id => {
+          //console.log(id);
+          //console.log(document.getElementById(id));
           return document.getElementById(id);
         });
         
         const offsets = {};
+        //console.log(offsets);
         /* TODO: correct logic, uncomment and delete testing portion below once sections are set up */
-        //sections.forEach(div => {
-            //offsets[div.id] = div.offsetTop;
+        sections.forEach(div => {
+            offsets[div.id] = div.offsetTop;
             
         /* FOR TESTING */
-        navIds.forEach((id, index) =>  {
-            offsets[id] = 100 * index;
+        //navIds.forEach((id, index) =>  {
+            //offsets[id] = 100 * index;
 
         });
 
@@ -63,6 +67,7 @@ const Layout = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 456px)' });
   
   if (isMobile) {
+    console.log("Mobile");
     return (
       <div className="App" style={{overflow: 'visible'}}>
         <div id="title"></div>
@@ -77,39 +82,11 @@ const Layout = () => {
         <div id="title"></div>
         <Header />
         <NavBar offsets={offsetTops} />
-        <Title />
-        <Footer />
-      </div>
-    );
-  }
-};
-
-  /*
-  const isMobile = useMediaQuery({ query: '(max-width: 456px)' });
-    if (isMobile) {
-      return (
-        <div className="App" style={{overflow: 'visible'}}>
-          <div id="title" style={{overflow: 'visible'}}></div>
-          <NavBar offsets={offsetTops} />
-          <LandingAnim />
-          {children}
-          <Footer />
-        </div>
-      );
-    } else 
-    {
-    return (
-      <div className="App" style={{overflow: 'visible'}}>
-        <div id="title"></div>
-        <Header />
-        <LandingAnim /> 
-        <NavBar offsets={offsetTops} />
         {children}
         <Footer />
       </div>
     );
   }
 };
-*/
 
 export default Layout;

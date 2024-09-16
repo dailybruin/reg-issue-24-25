@@ -13,6 +13,7 @@ import Prime from './components/Prime';
 
 import Issue from './components/Issue';
 import NavBar from './components/NavBar';
+import Layout from "./components/Layout";
 
 
 function App() {
@@ -30,17 +31,18 @@ function App() {
 
   return data && (
     <div className="App">
-      <Header/>
-      {/*<NavBar/>*/}
-      <Issue/>
-      <div><News articles={data.news}/></div>
-      <div><Sports articles={data.sports}/></div>
-      <div><Arts articles={data.arts}/></div>
-      <div><Opinion articles={data.opinion}/></div>
-      <div><Quad articles={data.quad}/></div>
-      <div><Multimedia articles={data.multimedia}/></div>
-      <div><Prime articles={data.prime}/></div>
-      <EditorLetter editor_letter={data.editor_letter}/>
+      <Layout>
+        <Issue/>
+        <div id="editor-letter" key="editor-letter"><EditorLetter editor_letter={data.editor_letter}/></div>
+        <div id="interactive" key="interactive"></div>
+        <div id="news" key="news"><News articles={data.news}/></div>
+        <div id="sports" key="sports"><Sports articles={data.sports}/></div>
+        <div id="arts" key="arts"><Arts articles={data.arts}/></div>
+        <div id="opinion" key="opinion"><Opinion articles={data.opinion}/></div>
+        <div id="quad" key="quad"><Quad articles={data.quad}/></div>
+        <div id="multimedia" key="multimedia"><Multimedia articles={data.multimedia}/></div>
+        <div id="prime" key="prime"><Prime articles={data.prime}/></div>
+      </Layout>
       <Footer/>
     </div>
   );

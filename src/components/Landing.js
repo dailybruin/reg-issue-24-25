@@ -1,7 +1,6 @@
 
 import React from "react";
 import styled from "styled-components";
-import { mediaQueries } from "../shared/config";
 
 const Container = styled.div`
   width: 100%;

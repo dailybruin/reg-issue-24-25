@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
 import Header from './Header';
-import Footer from './Footer';
 //import LandingAnim from './LandingAnim';
 import NavBar from './NavBar';
 import { useMediaQuery } from 'react-responsive';
@@ -28,7 +27,7 @@ const Title = styled.div`
 const Layout = ( { children } ) => {
 
   //const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime', 'thirty', 'about'];
-  const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime'];
+  const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime', 'ab'];
 
   const [offsetTops, setOffsetTops] = useState({});
   const layoutRef = useRef(null);
@@ -83,7 +82,6 @@ const Layout = ( { children } ) => {
         <Header />
         <NavBar offsets={offsetTops} />
         {children}
-        <Footer />
       </div>
     );
   }

@@ -66,17 +66,36 @@ const Grid = styled.div`
 `;
 
 const Issue = (props) => {
-    const titles = ["LETTER", "INTERACTIVE", "NEWS", "SPORTS", "ARTS", "OPINION", "QUAD", "MULTIMEDIA", "PRIME", "ABOUT"]
+    const titles = [
+        { name: "LETTER", id: "editor-letter" },
+        { name: "INTERACTIVE", id: "interactive" },
+        { name: "NEWS", id: "news" },
+        { name: "SPORTS", id: "sports" },
+        { name: "ARTS", id: "arts" },
+        { name: "OPINION", id: "opinion" },
+        { name: "QUAD", id: "quad" },
+        { name: "MULTIMEDIA", id: "multimedia" },
+        { name: "PRIME", id: "prime" },
+        { name: "ABOUT", id: "ab" }
+      ];
     return(
         <>
         <Container>
             <Title>What is in this issue?</Title>
             <Grid>
             {titles.map((article, index) => (
-                <StyledButton>
-                    <Name>{article}</Name>
-                </StyledButton>
-            ))}
+                <StyledButton
+                    key={index}
+                    onClick={() => {
+                    const element = document.getElementById(article.id);
+                    if (element) {
+                        element.scrollIntoView({ behavior: "smooth" }); // Scrolls to the section smoothly
+                    }
+                    }}
+                >
+            <Name>{article.name}</Name>
+          </StyledButton>
+        ))}
             </Grid>
             
         </Container>

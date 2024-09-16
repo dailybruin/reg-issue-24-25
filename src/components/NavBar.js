@@ -3,7 +3,6 @@ import './NavBar.css';
 import Vine from '../images/vine.png'
 import hamburgerButton from '../images/buttons/hamburger.svg';
 import cancelButton from '../images/buttons/cancel.svg';
-import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import DBHeader from './Header';
 
@@ -11,9 +10,9 @@ export default function NavBar({ offsets }) {
     //const navItems = ['Letter', 'Interactive', 'News', 'Sports', 'Arts', 'Opinion', 'Quad', 'Multimedia', 'Prime', 'About'];
     //const navLinks = ['#editor-letter', '#interactive', '#news', '#sports', '#arts', '#opinion', '#quad', '#multimedia', '#prime', '#about'];
     //const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime', 'about'];
-    const navItems = ['Letter', 'Interactive', 'News', 'Sports', 'Arts', 'Opinion', 'Quad', 'Multimedia', 'Prime'];
-    const navLinks = ['#editor-letter', '#interactive', '#news', '#sports', '#arts', '#opinion', '#quad', '#multimedia', '#prime'];
-    const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime'];
+    const navItems = ['Letter', 'Interactive', 'News', 'Sports', 'Arts', 'Opinion', 'Quad', 'Multimedia', 'Prime', 'About'];
+    const navLinks = ['#editor-letter', '#interactive', '#news', '#sports', '#arts', '#opinion', '#quad', '#multimedia', '#prime', "#ab"];
+    const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime', 'ab'];
 
     // State and Effects to handle NavBar scrolling
     const [vineSectionIds, setVineSectionIds] = useState([]);

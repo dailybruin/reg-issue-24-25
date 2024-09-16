@@ -52,27 +52,27 @@ background-repeat: no-repeat;
 `;
   return data && (
     <div className="App">
-      <Header/>
-      <Landing landing={data.landing}/>
       <Layout>
-      <Issue/>
-      <EditorLetter editor_letter={data.editor_letter}/>
-      <Interactive interactive={data.interactive}/>
-      <GradientBackground>
-        <Background>
-          <div><News articles={data.news}/></div>
-          <div><Sports articles={data.sports}/></div>
-          <div><Arts articles={data.arts}/></div>
-          <div><Opinion articles={data.opinion}/></div>
-          <div><Quad articles={data.quad}/></div>
-          <div><Multimedia articles={data.multimedia}/></div>
-          <div><Prime articles={data.prime}/></div>
-        </Background>
+        <Landing landing={data.landing}/>
+        <Issue/>
+        <div id="editor-letter" key="editor-letter"><EditorLetter editor_letter={data.editor_letter}/></div>
+        <div id="interactive" key="interactive"><Interactive interactive={data.interactive}/></div>
+        <GradientBackground>
+          <Background>
+            <div id="news" key="news"><News articles={data.news}/></div>
+            <div id="sports" key="sports"><Sports articles={data.sports}/></div>
+            <div id="arts" key="arts"><Arts articles={data.arts}/></div>
+            <div id="opinion" key="opinion"><Opinion articles={data.opinion}/></div>
+            <div id="quad" key="quad"><Quad articles={data.quad}/></div>
+            <div id="multimedia" key="multimedia"><Multimedia articles={data.multimedia}/></div>
+            <div id="prime" key="prime"><Prime articles={data.prime}/></div>
+          </Background>
+          <div id="ab" key="ab"><About about={data.about}/></div>
       </GradientBackground>
-      <div><About about={data.about}/></div>
       </Layout>
       <Footer/>
     </div>
+  
   );
 }
 

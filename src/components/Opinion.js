@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import ArticleCard from './ArticleCard.js';
 
 const Container = styled.div`
-    background: #4C6953;
+    background: transparent;
     padding-top: 8em;
 `
 

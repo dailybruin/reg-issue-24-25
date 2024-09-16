@@ -4,7 +4,7 @@ import { mediaQueries } from '../shared/config';
 
 
 const Container = styled.div`
-    background: #4C6953;
+    background: transparent;
     padding-top: 8em;
 `
 
@@ -30,8 +30,14 @@ const Title = styled.div`
     line-height: 1.2;
     text-align: center;
     color: #F6E4E1;
-    border: 15px solid #4C6953;
     margin-bottom: 0.4em;
+
+    text-shadow: 
+    0px 0px 10px black, /* Base shadow for slight outline effect */
+    0px 0px 20px red, /* Expand shadow to create a thicker outline */
+    0px 0px 30px blue, /* Increase the blur for a more pronounced outline */
+    0px 0px 40px green, /* Further thickening the outline */
+    0px 0px 50px #4C6953; 
 `;
 
 const Center = styled.div`

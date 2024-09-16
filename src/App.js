@@ -12,10 +12,13 @@ import Multimedia from './components/Multimedia';
 import Prime from './components/Prime';
 import Landing from './components/Landing';
 import Issue from './components/Issue';
-import NavBar from './components/NavBar';
 import Interactive from './components/Interactive';
 import About from './components/About';
+import Layout from './components/Layout';
 
+import styled from 'styled-components';
+import background from './images/background.png';
+import lights from './images/lights.png';
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -30,22 +33,44 @@ function App() {
 
 
 
+  const GradientBackground = styled.div`
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #4C6953;
+  z-index: -1;
+`
+
+const Background = styled.div`
+position: relative;
+width: 100%;
+height: 8295.32px;  /* Change to auto or fit-content if you build cards to expand down */
+background: 
+    url(${background}), /* top layer background */
+    url(${lights}); /* bottom layer background */
+background-repeat: no-repeat;
+`;
   return data && (
     <div className="App">
       <Header/>
-      {/*<NavBar/>*/}
       <Landing landing={data.landing}/>
+      <Layout>
       <Issue/>
       <EditorLetter editor_letter={data.editor_letter}/>
       <Interactive interactive={data.interactive}/>
-      <div><News articles={data.news}/></div>
-      <div><Sports articles={data.sports}/></div>
-      <div><Arts articles={data.arts}/></div>
-      <div><Opinion articles={data.opinion}/></div>
-      <div><Quad articles={data.quad}/></div>
-      <div><Multimedia articles={data.multimedia}/></div>
-      <div><Prime articles={data.prime}/></div>
+      <GradientBackground>
+        <Background>
+          <div><News articles={data.news}/></div>
+          <div><Sports articles={data.sports}/></div>
+          <div><Arts articles={data.arts}/></div>
+          <div><Opinion articles={data.opinion}/></div>
+          <div><Quad articles={data.quad}/></div>
+          <div><Multimedia articles={data.multimedia}/></div>
+          <div><Prime articles={data.prime}/></div>
+        </Background>
+      </GradientBackground>
       <div><About about={data.about}/></div>
+      </Layout>
       <Footer/>
     </div>
   );

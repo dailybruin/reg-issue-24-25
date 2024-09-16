@@ -50,7 +50,7 @@ const Footer = () => {
           <a href="https://www.twitter.com/dailybruin" target="_blank" rel="noreferrer"><img src={twitter} alt=""/></a>
           <a href="https://www.tiktok.com/@dailybruin" target="_blank" rel="noreferrer"><img src={tiktok} alt=""/></a>
           <a href="http://eepurl.com/cFEiZX" target="_blank" rel="noreferrer"><img src={email} alt=""/></a>
-          <p>Built with Suzy’s ♥ in Kerckhoff 118 by [developers]. Designed by Crystal Tompkins and Shrey Chaganlal.</p>
+          <p>Built with Suzy’s ♥ in Kerckhoff 118 by Donny Rimer, Sakshi Thoutireddy, Tyler Cho, Shiv Patel, Lex Wang, Felicia Keller. Designed by Crystal Tompkins and Shrey Chaganlal.</p>
         </Socials>
     </Container>
     )

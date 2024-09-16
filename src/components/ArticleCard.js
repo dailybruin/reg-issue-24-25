@@ -7,7 +7,7 @@ const Container = styled.div`
     justify-content: flex-start;
     align-items: start;
 
-    width: 33em;
+    width: 32em;
     height: 20vh;
     border: 6px solid #4C6953;
     border-radius: 2vw;
@@ -61,7 +61,7 @@ const Title = styled.div`
 
 const ByLine = styled.div`
     background-color: transparent;
-    width: 90%;
+    width: 40%;
     height: fit-content;
     padding-bottom: 0.5vh;
     margin-left: 55%;

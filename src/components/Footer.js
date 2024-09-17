@@ -36,6 +36,7 @@ const Socials = styled.div`
 		margin: 80px 20px;
 		${mediaQueries.mobile} {
 			margin: 50px 20px;
+      font-size: 10px;
 		}
 	}
 `

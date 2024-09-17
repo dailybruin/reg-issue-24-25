@@ -71,9 +71,6 @@ const Content = styled.div`
   color: #4C6953;
   column-count: 2;
   column-gap: 3em;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 
   ${mediaQueries.mobile} {
     font-size: 14px;
@@ -91,6 +88,9 @@ const Box = styled.div`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  ${mediaQueries.mobile} {
+    margin-left: 1em;
+  }
 `
 
 const Paragraph = styled.div`
@@ -105,6 +105,9 @@ const Paragraph = styled.div`
   text-align: center;
   color: #F6E4E1;
   padding: 2em;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 
 `
 

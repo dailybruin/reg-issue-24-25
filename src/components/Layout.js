@@ -71,6 +71,7 @@ const Layout = ( { children } ) => {
       <div className="App" style={{overflow: 'visible'}}>
         <div id="title"></div>
         <NavBar offsets={offsetTops} />
+        {children}
         <Title></Title>
       </div>
     );

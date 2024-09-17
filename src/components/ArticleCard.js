@@ -28,7 +28,7 @@ const Container = styled.div`
         border: 4px solid #4C6953;
         border-radius: 2vw;
 
-        padding-top: 1vh; // Adjust padding to move content up
+        padding-top: 1vh;
     }
 `;
 
@@ -55,7 +55,7 @@ const Title = styled.div`
         width: 90%;
         height: fit-content;
         margin-left: 5%;
-        margin-top: 80%;
+        margin-top: 22em;
     }
 `
 
@@ -82,7 +82,7 @@ const ByLine = styled.div`
         width: 90%;
         height: fit-content;
         margin-left: 5%;
-        margin-top: -10%;
+        margin-top: -1em;
     }
 `
 

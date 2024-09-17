@@ -1,6 +1,8 @@
 
 import React from "react";
 import styled from "styled-components";
+import { mediaQueries } from '../shared/config';
+
 
 const Container = styled.div`
     background: #D3D7C6;
@@ -32,7 +34,9 @@ const Image = styled.img`
     gap: 0px;
     opacity: 0px;
     background: #4C6953;
-
+    ${mediaQueries.mobile} {
+      margin-left: 4.5em;
+    }
 `;
 
 const Interactive = ({interactive}) => {

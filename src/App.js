@@ -43,7 +43,7 @@ function App() {
 const Background = styled.div`
 position: relative;
 width: 100%;
-height: 8295.32px;  /* Change to auto or fit-content if you build cards to expand down */
+height: fit-content;  /* Change to auto or fit-content if you build cards to expand down */
 background: 
     url(${background}), /* top layer background */
     url(${lights}); /* bottom layer background */
@@ -52,7 +52,7 @@ background-repeat: no-repeat;
   return data && (
     <div className="App">
       <Layout>
-        <Landing landing={data.landing}/>
+      <div id="landing" key="landing"><Landing landing={data.landing}/></div>
         <Issue/>
         <div id="editor-letter" key="editor-letter"><EditorLetter editor_letter={data.editor_letter}/></div>
         <div id="interactive" key="interactive"><Interactive interactive={data.interactive}/></div>

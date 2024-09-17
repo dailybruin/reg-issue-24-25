@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-  
+import { mediaQueries } from '../shared/config';
+
 
 const Container = styled.div`
     width: 100%;
@@ -54,6 +55,10 @@ const StyledButton = styled.div`
             background: #F6E4E1; 
         }
     }
+    ${mediaQueries.mobile} {
+        width: 12em;
+        margin-left: -1.2em;
+    }
 `
 
 const Grid = styled.div`
@@ -89,7 +94,7 @@ const Issue = (props) => {
                     onClick={() => {
                     const element = document.getElementById(article.id);
                     if (element) {
-                        element.scrollIntoView({ behavior: "smooth" }); // Scrolls to the section smoothly
+                        element.scrollIntoView({ behavior: "smooth" }); 
                     }
                     }}
                 >

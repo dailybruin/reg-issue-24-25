@@ -25,7 +25,7 @@ const Title = styled.div`
     line-height: 1.2;
     text-align: center;
     color: #F6E4E1;
-    border: 15px solid #4C6953;
+    -webkit-text-stroke: 5px #4C6953;
     margin-bottom: 0.4em;
 `;
 

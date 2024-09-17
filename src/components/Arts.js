@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import ArticleCard from './ArticleCard.js';
+import { mediaQueries } from '../shared/config';
+
 
 const Container = styled.div`
     background: transparent;
@@ -13,6 +15,10 @@ const Grid = styled.div`
     column-gap: -2em;
     margin-bottom: 4em;
     margin-left: 8%;
+    padding-top: 4em;
+    ${mediaQueries.mobile} {
+        margin-left: 0em;
+    }
 `;
 
 const Title = styled.div`
@@ -25,7 +31,7 @@ const Title = styled.div`
     line-height: 1.2;
     text-align: center;
     color: #F6E4E1;
-    border: 15px solid #4C6953;
+    
 `;
 
 const Center = styled.div`
@@ -33,6 +39,9 @@ const Center = styled.div`
     grid-template-columns: repeat(2, 2fr);
     margin-top: 6em;
     margin-left: 30%;
+    ${mediaQueries.mobile} {
+        margin-top: 12em;
+    }
 `;
 
 const Arts = ({articles}) => {

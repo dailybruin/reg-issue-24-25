@@ -56,8 +56,14 @@ export default function NavBar({ offsets }) {
                     return (
                         <div key={item} className='nav-component'>
                             <button className='nav-button'>
+                                {/*TODO: resolve the issue of vine render toggling on/off for toggleMobileMenu on desktop*/}
                                 {!isMobileMenuOpen && vineSectionIds.includes(navIds[index]) && (
-                                    <img src={Vine} className='vine' alt='Vine'/>
+                                    <div>
+                                        <img src={Vine} className='vine' alt='Vine'/>
+                                        <button className='vine-button'>
+                                            <a href={navLinks[index]} className='nav-link' onClick={toggleMobileMenu} />
+                                        </button>
+                                    </div>
                                 )}
                                 <a href={navLinks[index]} className='nav-link' onClick={toggleMobileMenu}>{item}</a>
                             </button>

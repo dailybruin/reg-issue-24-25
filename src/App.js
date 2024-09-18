@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
-import Header from './components/Header';
 import Footer from './components/Footer';
 import EditorLetter from './components/EditorLetter';
 import Arts from './components/Arts';
@@ -10,9 +9,7 @@ import Opinion from './components/Opinion';
 import Quad from './components/Quad';
 import Multimedia from './components/Multimedia';
 import Prime from './components/Prime';
-
 import Issue from './components/Issue';
-import NavBar from './components/NavBar';
 import Layout from "./components/Layout";
 
 
@@ -25,9 +22,6 @@ function App() {
 		.then(res => res.json())
 		.then(res => setData(res.data['article.aml']))
   }, [])
-
-
-
 
   return data && (
     <div className="App">

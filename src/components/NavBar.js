@@ -49,40 +49,70 @@ export default function NavBar({ offsets }) {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    return (
-        <nav className="navbar" id="navbar">
-            {isMobile ? <DBHeader>Daily Bruin</DBHeader> : null}
-            <div className={`nav ${isMobileMenuOpen ? 'nav-mobile-open' : ''}`}>
-                {navItems.map((item, index) => {
-                    return (
-                        <div key={item} className='nav-component'>
-                            <button className='nav-button'>
-                                {/*TODO: resolve the issue of vine render toggling on/off for toggleMobileMenu on desktop*/}
-                                {!isMobileMenuOpen && vineSectionIds.includes(navIds[index]) && (
-                                    <div>
-                                        <img src={Vine} className='vine' alt='Vine'/>
-                                        <button className='vine-button'>
-                                            <a href={navLinks[index]} className='nav-link' onClick={toggleMobileMenu} />
-                                        </button>
-                                    </div>
-                                )}
-                                <a href={navLinks[index]} className='nav-link' onClick={toggleMobileMenu}>{item}</a>
-                            </button>
-                        </div>
-                    )
-                })}
-            </div>
-            <button className="hamburger" onClick={toggleMobileMenu}>
-                <img src={hamburgerButton} alt="Open Menu" />
-            </button>
-            {isMobileMenuOpen && (
-                <div className="mobile-menu">
-                    <button className="close" onClick={toggleMobileMenu}>
-                        <img src={cancelButton} alt="Close Menu" />
-                    </button>
+    if (isMobile) {
+        return (
+            <nav className="navbar" id="navbar">
+                <DBHeader>Daily Bruin</DBHeader>
+                <div className='nav nav-mobile-open'>
+                    {navItems.map((item, index) => {
+                        {navItems.map((item, index) => {
+                            return (
+                                <div key={item} className='nav-component'>
+                                    <button className='nav-button'>
+                                        {/*TODO: resolve the issue of vine render toggling on/off for toggleMobileMenu on desktop*/}
+                                        {!isMobileMenuOpen && vineSectionIds.includes(navIds[index]) && (
+                                            <div>
+                                                <button className='vine-button'>
+                                                    <a href={navLinks[index]} className='nav-link' onClick={toggleMobileMenu} />
+                                                </button>
+                                            </div>
+                                        )}
+                                        <a href={navLinks[index]} className='nav-link' onClick={toggleMobileMenu}>{item}</a>
+                                    </button>
+                                </div>
+                            )
+                        })}
+                    })}
                 </div>
-            )}
-        </nav>
-    );
+                <button className="hamburger" onClick={toggleMobileMenu}>
+                    <img src={hamburgerButton} alt="Open Menu" />
+                </button>
+                {isMobileMenuOpen && (
+                    <div className="mobile-menu">
+                        <button className="close" onClick={toggleMobileMenu}>
+                            <img src={cancelButton} alt="Close Menu" />
+                        </button>
+                    </div>
+                )}
+            </nav>
+        );
+    }
+    else {
+        return (
+            <nav className="navbar" id="navbar">
+                {isMobile ? <DBHeader>Daily Bruin</DBHeader> : null}
+                <div className={`nav ${isMobileMenuOpen ? 'nav-mobile-open' : ''}`}>
+                    {navItems.map((item, index) => {
+                        return (
+                            <div key={item} className='nav-component'>
+                                <button className='nav-button'>
+                                    {/*TODO: resolve the issue of vine render toggling on/off for toggleMobileMenu on desktop*/}
+                                    {vineSectionIds.includes(navIds[index]) && (
+                                        <div>
+                                            <img src={Vine} className='vine' alt='Vine'/>
+                                            <button className='vine-button'>
+                                                <a href={navLinks[index]} className='nav-link'/>
+                                            </button>
+                                        </div>
+                                    )}
+                                    <a href={navLinks[index]} className='nav-link'>{item}</a>
+                                </button>
+                            </div>
+                        )
+                    })}
+                </div>
+            </nav>
+        );
+    }
 }
 

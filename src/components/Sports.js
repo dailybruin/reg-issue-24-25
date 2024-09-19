@@ -37,6 +37,9 @@ const StyledText = styled.text`
     stroke-linejoin: round;
     fill: #F6E4E1;
     paint-order: stroke;
+    ${mediaQueries.mobile} {
+        font-size: 45px;
+    }
 `;
 
 

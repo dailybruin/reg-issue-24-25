@@ -12,7 +12,7 @@ export default function NavBar({ offsets }) {
     //const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime', 'about'];
     const navItems = ['Letter', 'Interactive', 'News', 'Sports', 'Arts', 'Opinion', 'Quad', 'Multimedia', 'Prime', 'About'];
     const navLinks = ['#editor-letter', '#interactive', '#news', '#sports', '#arts', '#opinion', '#quad', '#multimedia', '#prime', "#ab"];
-    const navIds = ['editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime', 'ab'];
+    const navIds = ['landing', 'editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime', 'ab'];
 
     // State and Effects to handle NavBar scrolling
     const [vineSectionIds, setVineSectionIds] = useState([]);
@@ -42,7 +42,7 @@ export default function NavBar({ offsets }) {
 
     // Toggle mobile menu
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const isMobile = useMediaQuery({ query: '(max-width: 456px)' });
+    const isMobile = useMediaQuery({ query: '(max-width: 700px)' });
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -50,24 +50,28 @@ export default function NavBar({ offsets }) {
 
     return (
         <nav className="navbar" id="navbar">
-            {isMobile ? <DBHeader>Daily Bruin</DBHeader> : null}
+            {isMobile ? (
+                <DBHeader>Daily Bruin</DBHeader>
+            ) : (
+                <DBHeader>Daily Bruin</DBHeader>
+            )}
+            {isMobile && (
+                <button className="hamburger" onClick={toggleMobileMenu}>
+                    <img src={hamburgerButton} alt="Open Menu" />
+                </button>
+            )}
             <div className={`nav ${isMobileMenuOpen ? 'nav-mobile-open' : ''}`}>
-                {navItems.map((item, index) => {
-                    return (
-                        <div key={item} className='nav-component'>
-                            <button className='nav-button'>
-                                {!isMobileMenuOpen && vineSectionIds.includes(navIds[index]) && (
-                                    <img src={Vine} className='vine' alt='Vine'/>
-                                )}
-                                <a href={navLinks[index]} className='nav-link' onClick={toggleMobileMenu}>{item}</a>
-                            </button>
-                        </div>
-                    )
-                })}
+                {navItems.map((item, index) => (
+                    <div key={item} className='nav-component'>
+                        <button className='nav-button'>
+                            {!isMobileMenuOpen && vineSectionIds.includes(navIds[index]) && (
+                                <img src={Vine} className='vine' alt='Vine'/>
+                            )}
+                            <a href={navLinks[index]} className='nav-link' onClick={toggleMobileMenu}>{item}</a>
+                        </button>
+                    </div>
+                ))}
             </div>
-            <button className="hamburger" onClick={toggleMobileMenu}>
-                <img src={hamburgerButton} alt="Open Menu" />
-            </button>
             {isMobileMenuOpen && (
                 <div className="mobile-menu">
                     <button className="close" onClick={toggleMobileMenu}>

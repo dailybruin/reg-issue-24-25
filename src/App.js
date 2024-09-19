@@ -52,7 +52,6 @@ background-repeat: no-repeat;
 `;
   return data && (
     <div className="App">
-      <generateWordSet></generateWordSet>
       <Layout>
       <div id="landing" key="landing"><Landing landing={data.landing}/></div>
         <Issue/>

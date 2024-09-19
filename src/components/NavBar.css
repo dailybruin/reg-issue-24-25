@@ -28,9 +28,10 @@
     padding: 0;
     width: 100%;
     z-index: 20;              /* set so that vines cover Header, and not vice versa */
-    top: 28px;                  /* so that Daily Bruin logo remains at the top, uncovered by sticky */
+    top: 0;                  /* so that Daily Bruin logo remains at the top, uncovered by sticky */
     overflow: visible;
     position: sticky;
+    border: 1px solid #4C6953
 }
 
 /* Style for link */
@@ -99,6 +100,7 @@
     font-size: 24px;
     color: #ffffff;
     cursor: pointer;
+   
 }
 
 .close {

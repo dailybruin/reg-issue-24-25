@@ -29,6 +29,7 @@ const Container = styled.div`
         border: 4px solid #4C6953;
         border-radius: 2vw;
         padding-top: 1vh;
+        margin: 0 auto;
     }
 `;
 
@@ -37,7 +38,7 @@ const Title = styled.div`
     width: 40%;
     height: fit-content;
     margin-left: 55%;
-    margin-top: 1vh;
+    margin-top: 2vh;
     
 
     p {
@@ -56,7 +57,8 @@ const Title = styled.div`
         width: 90%;
         height: fit-content;
         margin-left: 5%;
-        margin-top: 108%;
+        margin-top: 90%;
+        font-size: 13px;
     }
 `
 

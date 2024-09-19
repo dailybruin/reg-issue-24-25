@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 import ArticleCard from './ArticleCard.js';
+import { mediaQueries } from '../shared/config';
+
 
 const Container = styled.div`
     background: transparent;
     padding-top: 8em;
+    ${mediaQueries.mobile} {
+        padding-top: 9em;
+    }
 `
 
 const Grid = styled.div`
@@ -11,8 +16,7 @@ const Grid = styled.div`
     grid-template-columns: repeat(2, 2fr);
     row-gap: 3%;
     column-gap: -2em;
-    padding: 4em;
-    margin-left: 8%;
+    padding: 4em; 
 `;
 
 const StyledSvg = styled.svg` /*https://stackoverflow.com/questions/4919076/outline-effect-to-text*/
@@ -32,6 +36,9 @@ const StyledText = styled.text`
     stroke-linejoin: round;
     fill: #F6E4E1;
     paint-order: stroke;
+    ${mediaQueries.mobile} {
+        font-size: 45px;
+    }
 `;
 
 

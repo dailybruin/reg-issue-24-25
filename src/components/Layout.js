@@ -80,7 +80,6 @@ const Layout = ( { children } ) => {
     return (
       <div className="App" style={{overflow: 'visible'}}>
         <div id="title"></div>
-        <Header />
         <NavBar offsets={offsetTops} />
         {children}
       </div>

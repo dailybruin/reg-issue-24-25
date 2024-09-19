@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { mediaQueries } from "../shared/config";
+import Animation from "../images/Landing.gif";
 
 const Container = styled.div`
   width: 100%;
@@ -26,7 +27,7 @@ const Landing = ({landing}) => {
   return (
     <>
       <Container>
-        <Image src={landing[0].landing_image} alt="Landing image" />
+        <Image src={Animation} alt="Landing image" />
       </Container>
     </>
   );

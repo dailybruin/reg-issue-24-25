@@ -21,17 +21,23 @@ const Grid = styled.div`
     }
 `;
 
-const Title = styled.div`
-    width: 95%;
-    height: auto;
-    border: 15px 0px 0px 0px;
-    font-family: "Cinzel", serif;
-    font-size: 115px;
-    font-weight: 700;
+const StyledSvg = styled.svg` /*https://stackoverflow.com/questions/4919076/outline-effect-to-text*/
+    width: 100%;
+    height: 100%;
+    font-family: 'Cinzel Decorative', serif;
+    font-size:  115px;
+    font-weight: 900;
     line-height: 1.2;
     text-align: center;
-    color: #F6E4E1;
-    
+    margin-bottom: 0.4em;
+`;
+
+const StyledText = styled.text`
+    stroke: #4C6953;
+    stroke-width: 20px;
+    stroke-linejoin: round;
+    fill: #F6E4E1;
+    paint-order: stroke;
 `;
 
 const Center = styled.div`
@@ -50,7 +56,16 @@ const Arts = ({articles}) => {
     return(
         <>
             <Container>
-            <Title>ARTS</Title>
+            <StyledSvg xmlns="http://www.w3.org/2000/svg">
+                    <StyledText
+                        x="50%"
+                        y="50%"
+                        dominantBaseline="central"
+                        textAnchor="middle"
+                    >
+                        ARTS
+                    </StyledText>
+                </StyledSvg> 
             <Grid>
             {articles.slice(0, -1).map((article, index) => (
                 <ArticleCard props={article} />

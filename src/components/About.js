@@ -60,7 +60,7 @@ const Text = styled.div`
 const Content = styled.div`
   margin: 0 auto;
   margin-top: 7%;
-  margin-left: 11%;
+  margin-left: 8%;
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: light;

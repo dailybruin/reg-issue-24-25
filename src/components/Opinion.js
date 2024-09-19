@@ -45,18 +45,16 @@ const Center = styled.div`
 `;
 
 const Opinion = ({articles}) => {
-    const lastCard = articles.length - 1;
 
     return(
         <>
             <Container>
             <Title>OPINION</Title>
             <Grid>
-            {articles.slice(0, -1).map((article, index) => (
+            {articles.map((article, index) => (
                 <ArticleCard props={article} />
             ))}
             </Grid>
-            <Center><ArticleCard props={articles[lastCard]}/></Center>
             </Container>
         </>
     );

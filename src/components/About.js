@@ -33,8 +33,8 @@ const Title = styled.div`
 
 const Container = styled.div`
   position: relative;
-  margin: 2em auto 0 auto;
-  width: 60%;
+  margin: 0em auto 0 auto;
+  width: 100%;
   height: fit-content;
   block-size: fit-content;
   font-family: "Oswald", sans-serif;
@@ -58,9 +58,8 @@ const Text = styled.div`
 
 
 const Content = styled.div`
-  margin: 5%;
+  margin: 0 auto;
   margin-top: 7%;
-  margin-bottom: 7%;
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: light;
@@ -70,7 +69,10 @@ const Content = styled.div`
   text-align: justify;
   color: #4C6953;
   column-count: 2;
-  column-gap: 3em;
+  column-gap: 6em;
+  width: 90%;
+  height: fit-content;
+  box-sizing: border-box;
 
   ${mediaQueries.mobile} {
     font-size: 14px;
@@ -80,16 +82,17 @@ const Content = styled.div`
 const Box = styled.div`
   width: 40em;
   height: fit-content;
-  margin-left: 4em;
   gap: 0px;
   border-radius: 20px;
   opacity: 0px;
   background: #84A98C;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   ${mediaQueries.mobile} {
-    margin-left: 1em;
+    width: 90%;
+    max-width: 90%;
+    padding: 1em;
   }
 `
 
@@ -111,13 +114,31 @@ const Paragraph = styled.div`
 
 `
 
+const SubTitle = styled.div`
+  color: #4C6953;
+  font-family: "Josefin Sans", serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 10%;
+
+  ${mediaQueries.mobile} {
+      font-size: 30px;
+      padding-bottom: 0;
+    }
+`
+
 export default function About(props) {
+  let first = true;
+
   return (
     <OuterContainer>
       <Title>about</Title>
       <Box>
         <Paragraph>Like what you see? <br /><br />Apply for a Daily Bruin internship now at <strong>apply.uclastudentmedia.com</strong></Paragraph>
       </Box>
+      <SubTitle>DAILY BRUIN EDITORIAL STAFF</SubTitle>
       <Container>
         <Text>
           <Content>
@@ -130,7 +151,21 @@ export default function About(props) {
                     {info.content}
                   </div>
                 );
-              } else if (info.type === "Section_header") {
+              } else if (info.type === "Section_header" && first) {
+                return (
+                  <p
+                    key={index}
+                    style={{
+                      fontWeight: "bold",
+                      marginTop: "0px",
+                      marginBottom: "0px",
+                    }}
+                  >
+                    {info.content}
+                  </p>
+                );
+                first = false;
+              } else if(info.type === "Section_header" && !first) {
                 return (
                   <p
                     key={index}
@@ -143,7 +178,7 @@ export default function About(props) {
                     {info.content}
                   </p>
                 );
-              } else {
+              }else {
                 return <p key={index}>{info.content}</p>;
               }
             })}

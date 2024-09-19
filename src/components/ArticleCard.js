@@ -6,6 +6,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
+    z-index: 1; 
 
     width: 32em;
     height: 20vh;
@@ -16,6 +17,7 @@ const Container = styled.div`
     background-color: #D3D7C6;
     transition: color 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
+    position: relative;
 
     &:hover {
         background-color: #758A76;
@@ -110,6 +112,7 @@ const Image = styled.img`
 
 const ArticleCard = ({props}) => {
     return (
+        <a href={props.article_url} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
             <Container>
                     <Image src={props.article_image} alt="Article image"/>
                 <Title>
@@ -123,7 +126,8 @@ const ArticleCard = ({props}) => {
                     </p>
                 </ByLine>
             </Container>
-    )
-}
+        </a>
+    );
+};
 
 export default ArticleCard;

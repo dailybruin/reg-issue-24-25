@@ -19,7 +19,6 @@ import styled from 'styled-components';
 import background from './images/background.png';
 import lights from './images/lights.png';
 
-
 function App() {
   const [ data, setData ] = useState(null);
   
@@ -52,7 +51,6 @@ background-repeat: no-repeat;
 `;
   return data && (
     <div className="App">
-      <generateWordSet></generateWordSet>
       <Layout>
       <div id="landing" key="landing"><Landing landing={data.landing}/></div>
         <Issue/>

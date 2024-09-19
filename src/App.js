@@ -32,12 +32,12 @@ function App() {
 
 
 
-  const GradientBackground = styled.div`
+const GradientBackground = styled.div`
   position: relative;
   width: 100%;
   height: auto;
   background: #4C6953;
-  z-index: -1;
+  
 `
 
 const Background = styled.div`
@@ -67,8 +67,8 @@ background-repeat: no-repeat;
             <div id="prime" key="prime"><Prime articles={data.prime}/></div>
           </Background>
           <div id="ab" key="ab"><About about={data.about}/></div>
-      </GradientBackground>
-      </Layout>
+        </GradientBackground>
+        </Layout>
       <Footer/>
     </div>
   

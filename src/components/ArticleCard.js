@@ -6,7 +6,6 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
-    z-index: 1; 
 
     width: 32em;
     height: 20vh;
@@ -26,10 +25,9 @@ const Container = styled.div`
 
     ${mediaQueries.mobile} {
         width: 100%;
-        height: 35vh;
+        height: 40vh;
         border: 4px solid #4C6953;
         border-radius: 2vw;
-
         padding-top: 1vh;
     }
 `;
@@ -40,6 +38,7 @@ const Title = styled.div`
     height: fit-content;
     margin-left: 55%;
     margin-top: 1vh;
+    
 
     p {
         font-family: "Josefin Sans", sans-serif;
@@ -57,7 +56,7 @@ const Title = styled.div`
         width: 90%;
         height: fit-content;
         margin-left: 5%;
-        margin-top: 22em;
+        margin-top: 108%;
     }
 `
 
@@ -84,7 +83,7 @@ const ByLine = styled.div`
         width: 90%;
         height: fit-content;
         margin-left: 5%;
-        margin-top: -1em;
+        margin-top: -2em;
     }
 `
 
@@ -112,6 +111,7 @@ const Image = styled.img`
 
 const ArticleCard = ({props}) => {
     return (
+        <>
         <a href={props.article_url} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
             <Container>
                     <Image src={props.article_image} alt="Article image"/>
@@ -127,6 +127,7 @@ const ArticleCard = ({props}) => {
                 </ByLine>
             </Container>
         </a>
+        </>
     );
 };
 

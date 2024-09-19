@@ -7,7 +7,7 @@
     top: -80%;
     object-fit: cover;
     width: 100%;
-    z-index: 1000000;
+    z-index: 100;
     
 }
 
@@ -27,7 +27,7 @@
     background-color: #654321;
     padding: 0;
     width: 100%;
-    z-index: 2002;              /* set so that vines cover Header, and not vice versa */
+    z-index: 20;              /* set so that vines cover Header, and not vice versa */
     top: 28px;                  /* so that Daily Bruin logo remains at the top, uncovered by sticky */
     overflow: visible;
     position: sticky;

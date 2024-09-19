@@ -30,8 +30,12 @@ const Title = styled.div`
     line-height: 1.2;
     text-align: center;
     color: #F6E4E1;
-    -webkit-text-stroke: 5px #4C6953;
     margin-bottom: 0.4em;
+    text-shadow: 
+      -1px -1px 10 #4C6953,  
+       1px -1px 10 #4C6953,
+      -1px  1px 10 #4C6953,
+       1px  1px 10 #4C6953;
 `;
 
 const Center = styled.div`

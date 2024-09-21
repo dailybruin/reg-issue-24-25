@@ -113,6 +113,10 @@ const Paragraph = styled.div`
   left: 50%;
   transform: translateX(-50%);
 
+    ${mediaQueries.mobile} {
+      font-size: 24px;
+    }
+
 `
 
 const SubTitle = styled.div`

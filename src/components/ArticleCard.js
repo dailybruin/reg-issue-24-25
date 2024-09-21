@@ -38,7 +38,7 @@ const Title = styled.div`
     width: 40%;
     height: fit-content;
     margin-left: 55%;
-    margin-top: 2vh;
+    margin-top: 1vh;
     
 
     p {
@@ -57,7 +57,7 @@ const Title = styled.div`
         width: 90%;
         height: fit-content;
         margin-left: 5%;
-        margin-top: 90%;
+        margin-top: 102%;
         font-size: 13px;
     }
 `
@@ -86,6 +86,7 @@ const ByLine = styled.div`
         height: fit-content;
         margin-left: 5%;
         margin-top: -2em;
+        font-size: 12px;
     }
 `
 

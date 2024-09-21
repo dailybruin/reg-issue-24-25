@@ -15,7 +15,7 @@ export default function NavBar({ offsets }) {
     const navIds = ['landing', 'editor-letter', 'interactive', 'news', 'sports', 'arts', 'opinion', 'quad', 'multimedia', 'prime', 'ab'];
 
     // State and Effects to handle NavBar scrolling
-    const [vineSectionIds, setVineSectionIds] = useState([]);
+   // const [vineSectionIds, setVineSectionIds] = useState([]);
     const [currOffset, setCurrOffset] = useState(0);
 
     useEffect(() => {
@@ -30,7 +30,7 @@ export default function NavBar({ offsets }) {
                     temp.push(key);
                 }
             }
-            setVineSectionIds(temp);
+           // setVineSectionIds(temp);
         }
 
         window.addEventListener('scroll', handleScroll);
@@ -64,9 +64,9 @@ export default function NavBar({ offsets }) {
                 {navItems.map((item, index) => (
                     <div key={item} className='nav-component'>
                         <button className='nav-button'>
-                            {!isMobileMenuOpen && vineSectionIds.includes(navIds[index]) && (
+                           {/*} {!isMobileMenuOpen && vineSectionIds.includes(navIds[index]) && (
                                 <img src={Vine} className='vine' alt='Vine'/>
-                            )}
+                           )}*/}
                             <a href={navLinks[index]} className='nav-link' onClick={toggleMobileMenu}>{item}</a>
                         </button>
                     </div>

@@ -44,18 +44,7 @@ const StyledText = styled.text`
 
 
 
-const Center = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    margin-top: 6em;
-    margin-left: 30%;
-    ${mediaQueries.mobile} {
-        margin-top: 18em;
-    }
-`;
-
 const Sports = ({articles}) => {
-    const lastCard = articles.length - 1;
 
     return(
         <>
@@ -71,11 +60,11 @@ const Sports = ({articles}) => {
                     </StyledText>
                 </StyledSvg> 
             <Grid>
-            {articles.slice(0, -1).map((article, index) => (
+            {articles.map((article, index) => (
                 <ArticleCard props={article} />
             ))}
             </Grid>
-            <Center><ArticleCard props={articles[lastCard]}/></Center>
+            
             </Container>
         </>
     );

@@ -28,7 +28,7 @@ const Title = styled.div`
 
 const Name = styled.div`
     font-family: Josefin Sans;
-    font-size: 28px;
+    font-size: 2.5vw;
     font-weight: 700;
     line-height: 28px;
     text-align: center;
@@ -37,7 +37,7 @@ const Name = styled.div`
 `
 
 const StyledButton = styled.div`
-    width: 16em;
+    width: 100%;
     height: 5.5em;
     margin-top: 1em;
     border-radius: 10px;
@@ -55,10 +55,7 @@ const StyledButton = styled.div`
             background: #F6E4E1; 
         }
     }
-    ${mediaQueries.mobile} {
-        width: 12em;
-        margin-left: -1.2em;
-    }
+   
 `
 
 const Grid = styled.div`

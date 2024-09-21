@@ -21,7 +21,7 @@ export default function NavBar({ offsets }) {
     useEffect(() => {
 
         const handleScroll = () => {
-            console.log(offsets);
+            // console.log(offsets);
             setCurrOffset(window.scrollY);
 
             const temp = [];

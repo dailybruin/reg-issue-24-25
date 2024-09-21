@@ -26,7 +26,7 @@
 .navbar {
     background-color: #654321;
     padding: 0;
-    width: 100%;
+    width: 99.55%;
     z-index: 20;              /* set so that vines cover Header, and not vice versa */
     top: 0;                  /* so that Daily Bruin logo remains at the top, uncovered by sticky */
     overflow: visible;

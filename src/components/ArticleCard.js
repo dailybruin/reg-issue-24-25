@@ -24,7 +24,7 @@ const Container = styled.div`
     }
 
     ${mediaQueries.mobile} {
-        width: 100%;
+        width: 11em; 
         height: 40vh;
         border: 4px solid #4C6953;
         border-radius: 2vw;
@@ -32,6 +32,7 @@ const Container = styled.div`
         margin: 0 auto;
     }
 `;
+
 
 const Title = styled.div`
     background-color: transparent;
@@ -57,7 +58,7 @@ const Title = styled.div`
         width: 90%;
         height: fit-content;
         margin-left: 5%;
-        margin-top: 102%;
+        margin-top: 90%;
         font-size: 13px;
     }
 `

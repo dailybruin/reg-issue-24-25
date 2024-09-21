@@ -71,6 +71,12 @@ h1 {
   padding-top: 8px;
 }
 
+@media (max-width: 768px) {
+  .instructions {
+    transform: translateY(-10vh); /* Move up by 10vh on mobile screens */
+  }
+}
+
 .row {
   flex: 33%;
   display: flex;

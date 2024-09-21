@@ -46,7 +46,7 @@ const Title = styled.div`
         font-family: "Josefin Sans", sans-serif;
         font-weight: bolder;
         font-style: normal;
-        font-size: 1em;
+        font-size: 0.8em;
         text-align: left;
         line-height: normal;
         color: inherit;
@@ -58,8 +58,8 @@ const Title = styled.div`
         width: 82%;
         height: fit-content;
         margin-left: 5%;
-        margin-top: 100%;
-        font-size: 13px;
+        margin-top: 115%;
+        font-size: 14px;
     }
 `
 

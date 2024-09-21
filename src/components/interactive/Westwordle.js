@@ -19,6 +19,10 @@ const Title = styled.div`
     line-height: 155.02px;
     text-align: center;
     color: #4C6953;
+
+    @media screen and (max-width: 456px) {
+        font-size: 50px;      
+      }
 `;
 
 

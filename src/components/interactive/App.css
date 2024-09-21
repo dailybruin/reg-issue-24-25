@@ -2,11 +2,11 @@
   text-align: center;
   background-color: #D3D7C6;
   width: 100vw;
-  height: 120vh;
+  height: 140vh;
   padding-top: 5vh;
   display: flex;
   color: #D3D7C6;
-}
+} 
 
 .background {
   background-color: #D3D7C6;
@@ -62,18 +62,23 @@ h1 {
   font-family: "PT Sans", sans-serif;
   color: #4C6953;
   font-size: 1.5em;
-  margin-top: 100px;
+  margin-top: 30vh;
   background-color: #FFFFFF;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 20px;
   padding-bottom: 20px;
   padding-top: 8px;
+  
 }
 
-@media (max-width: 768px) {
+@media (max-width: 456px) {
   .instructions {
-    transform: translateY(-10vh); /* Move up by 10vh on mobile screens */
+    margin-top: 100px;
+    transform: translateY(-0.5vh); /* Move up by 10vh on mobile screens */
+  }
+  .ww {
+    height: 120vh;
   }
 }
 

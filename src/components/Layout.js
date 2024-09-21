@@ -46,7 +46,9 @@ const Layout = ( { children } ) => {
         //console.log(offsets);
         /* TODO: correct logic, uncomment and delete testing portion below once sections are set up */
         sections.forEach(div => {
+          if (div) {  // Check if the element exists before accessing its properties
             offsets[div.id] = div.offsetTop;
+          }
             
         /* FOR TESTING */
         //navIds.forEach((id, index) =>  {
@@ -77,6 +79,7 @@ const Layout = ( { children } ) => {
     );
   }
   else {
+    console.log("Desktop");
     return (
       <div className="App" style={{overflow: 'visible'}}>
         <div id="title"></div>

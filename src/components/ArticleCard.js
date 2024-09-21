@@ -55,7 +55,7 @@ const Title = styled.div`
     }
 
     ${mediaQueries.mobile} {
-        width: 90%;
+        width: 82%;
         height: fit-content;
         margin-left: 5%;
         margin-top: 90%;

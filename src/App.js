@@ -60,16 +60,16 @@ return data && (
       <Issue/>
       <div id="editor-letter" key="editor-letter"><EditorLetter editor_letter={data.editor_letter}/></div>
       {/* <div id="interactive" key="interactive"><Interactive interactive={data.interactive}/></div> */}
-      <Westwordle />
+      <div id="interactive" key="interactive"><Westwordle /></div>
       <GradientBackground>
       <Background>
-        <AnySection title="news" articles={data.news} increaseMarginTop="true" />  {/* why is this last card wrong?? */}
-        <AnySection title="sports" articles={data.sports} />
-        <AnySection title="arts" articles={data.arts} />
-        <AnySection title="opinion" articles={data.opinion} />
-        <AnySection title="quad" articles={data.quad} />
-        <AnySection title="multimedia" articles={data.multimedia} />
-        <AnySection title="prime" articles={data.prime} />
+        <div id="news" key="news"><AnySection title="news" articles={data.news} increaseMarginTop="true" /></div>  {/* why is this last card wrong?? */}
+        <div id="sports" key="sports"><AnySection title="sports" articles={data.sports} /></div>
+        <div id="arts" key="arts"><AnySection title="arts" articles={data.arts} /></div>
+        <div id="opinion" key="opinion"><AnySection title="opinion" articles={data.opinion} /></div>
+        <div id="quad" key="quad"><AnySection title="quad" articles={data.quad} /></div>
+        <div id="multimedia" key="multimedia"><AnySection title="multimedia" articles={data.multimedia} /></div>
+        <div id="prime" key="prime"><AnySection title="prime" articles={data.prime} /></div>
       </Background>
         <div id="ab" key="ab"><About about={data.about}/></div>
       </GradientBackground>

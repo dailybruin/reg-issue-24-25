@@ -4,8 +4,24 @@ import Keyboard from "./Components/Keyboard";
 import { boardDefault, generateWordSet } from "./Words";
 import React, { useState, createContext, useEffect } from "react";
 import GameOver from "./Components/GameOver";
+import styled from 'styled-components';
+
 
 // Create the context to pass between components
+const Title = styled.div`
+    width: 100%;
+    height: auto;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Cinzel Decorative;
+    font-size: 115px;
+    font-weight: 700;
+    line-height: 155.02px;
+    text-align: center;
+    color: #4C6953;
+`;
+
+
 export const AppContext = createContext();
 
 function Westwordle() {
@@ -126,6 +142,7 @@ function Westwordle() {
           }}
         >
           <div className="game">
+          <Title>Westwords</Title>
             <Board />
             <Keyboard />
           </div>
@@ -137,6 +154,7 @@ function Westwordle() {
             <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -1260 1260 960" width="40px" fill="#CDCDCD"><path d="M186.67-120q-27.67 0-47.17-19.5T120-186.67v-586.66q0-27.67 19.5-47.17t47.17-19.5h586.66q27.67 0 47.17 19.5t19.5 47.17v586.66q0 27.67-19.5 47.17T773.33-120H186.67Z"/></svg>
             = Incorrect letter <br/>
           </p>
+          
           <GameOver trigger={gameOver.gameOver} setTrigger={startGame} />
         </AppContext.Provider>
       </div>

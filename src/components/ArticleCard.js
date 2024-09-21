@@ -58,7 +58,7 @@ const Title = styled.div`
         width: 82%;
         height: fit-content;
         margin-left: 5%;
-        margin-top: 90%;
+        margin-top: 100%;
         font-size: 13px;
     }
 `
@@ -69,7 +69,7 @@ const ByLine = styled.div`
     height: fit-content;
     padding-bottom: 0.5vh;
     margin-left: 55%;
-    margin-top: -2vh;
+    margin-top: -2.75vh;
 
     p {
         font-family: "PT Sans", sans-serif;

@@ -74,11 +74,10 @@ h1 {
 
 @media (max-width: 456px) {
   .instructions {
-    margin-top: 100px;
-    transform: translateY(-0.5vh); /* Move up by 10vh on mobile screens */
+    margin-top: 15vh;
   }
   .ww {
-    height: 120vh;
+    height: 130vh;
   }
 }
 

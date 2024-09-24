@@ -16,7 +16,7 @@ function GameOver(props) {
 
     let name = "      UCLALE\n";
 
-    let web = "\nfeatures.dailybruin.com/2024/reg-issue-2024/";
+    let web = "\nfeatures.dailybruin.com/2024/registration-issue-2024/";
 
     return (props.trigger) ? (
         <div className="gameOver">
